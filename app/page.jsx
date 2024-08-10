@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <div className=' flex flex-col'>
       <div className=' bg-gradient-to-t from-red-500 to-red-400 text-white'>
-        <div className=' flex justify-between items-center text-gray-700 bg-white m-5 p-5 border-2 border-red-200 rounded-lg shadow-lg shadow-red-500'>
+        <div className=' flex justify-between items-center text-gray-700 bg-white m-5 p-5  rounded-lg shadow-lg shadow-red-500'>
           <Link href='/'><h1 className='font-bold'>Money Maple 🍁</h1></Link> 
           <menu className='flex gap-4 items-center text'>
             <Link href='/signup'><Button>Login</Button></Link>
@@ -30,6 +30,11 @@ function HomePage() {
             <p className=''>
               Track Expenses, Manage Budgets, and Achieve Your Financial Goals
             </p>
+            <Link href='/login'>
+              <button className='group my-5 p-5 py-3 rounded-lg bg-white text-red-500 font-bold hover:shadow-lg hover:shadow-red-400 transition-all'>
+                Get Started
+              </button>
+            </Link>
           </div>
           <div className=' p-5 rounded-3xl bg-white shadow-2xl'>
             <Image
@@ -50,7 +55,7 @@ function HomePage() {
         </div>
         <div className='flex items-stretch gap-4 m-10'>
 
-          <div className='flex flex-col items-center border-2 rounded-xl p-5 '>
+          <div className='flex flex-col items-center justify-between border-2 rounded-xl shadow-lg p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -68,7 +73,7 @@ function HomePage() {
             </div>
           </div>
           
-          <div className='flex flex-col items-center border-2 rounded-xl p-5 '>
+          <div className='flex flex-col items-center justify-between border-2 rounded-xl shadow-lg p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -86,7 +91,7 @@ function HomePage() {
             </div>
           </div>
           
-          <div className='flex flex-col items-center border-2 rounded-xl p-5 '>
+          <div className='flex flex-col items-center justify-between border-2 rounded-xl shadow-lg p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -106,18 +111,25 @@ function HomePage() {
         </div>
       </section>
 
-      <section className='flex gap-10 text-gray-700 my-20'>
+      <section className='flex justify-center items-center divide-x-2 divide-red-600 gap-5 px-10 py-16 text-white bg-gradient-to-t from-red-500 to-red-400'>
         <div>
-          <h1 className='text-2xl font-bold text-center mt-10'>
+          <h1 className='text-2xl text-nowrap font-bold text-center'>
             Key Features ✨ 
           </h1>
         </div>
-        <div className=' grid grid-cols-2 grid-rows-2 gap-5 m-10'>
+        <div className=' pl-5'>
           <ul>
-            <li></li>
+            <li className='m-3'>Expense Tracking: Quickly add and manage your expenses and income.</li>
+            <li className='m-3'>Budget Management: Set and track your monthly budgets with ease.</li>
+            <li className='m-3'>Reports & Analytics: Generate comprehensive reports to analyze your spending.</li>
+            <li className='m-3'>Recurring Transactions: Automate your recurring expenses and income.</li>
           </ul>
         </div>
       </section>
+
+      <footer className='py-12 px-10 text-slate-200 bg-slate-600 text-center text-xs font-bold'>
+        &copy; 2024 <span className='p-1 bg-white bg-opacity-20 rounded'>Money Maple 🍁</span>. All rights reserved.
+      </footer>
     </div>
   )
 }
