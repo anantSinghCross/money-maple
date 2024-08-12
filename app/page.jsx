@@ -128,7 +128,7 @@ function HomePage() {
       </section>
 
       <footer className='py-12 px-10 text-slate-200 bg-slate-600 text-center text-xs font-bold'>
-        &copy; 2024 <span className='p-1 bg-white bg-opacity-20 rounded'>Money Maple 🍁</span>. All rights reserved.
+        &copy; 2024 <span className='p-1 bg-black bg-opacity-20 rounded'>Money Maple 🍁</span>. All rights reserved.
       </footer>
     </div>
   )
