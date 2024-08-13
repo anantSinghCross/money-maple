@@ -1,8 +1,14 @@
 import React from 'react'
 
 function AllTransactionsPage() {
+
   return (
-    <div>AllTransactionsPage</div>
+    <section>
+      <h3>All your transactions</h3>
+      <div>
+        
+      </div>
+    </section>
   )
 }
 
