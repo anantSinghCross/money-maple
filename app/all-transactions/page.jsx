@@ -1,6 +1,6 @@
 import TransactionTable from '@/components/transactions/TransactionTable';
 import { db } from '@/firebase'
-import { collection, getDocs, query, where } from '@firebase/firestore'
+import { collection, getDocs, query } from '@firebase/firestore'
 import React from 'react'
 
 async function AllTransactionsPage() {

@@ -6,18 +6,13 @@ import landingIllustration from '../public/landing.svg'
 import chartsIllustration from '../public/charts.svg'
 import organizingIllustration from '../public/organizing.svg'
 import simpleIllustration from '../public/simple.svg'
+import Header from '@/components/header'
 
 function HomePage() {
   return (
     <div className=' flex flex-col'>
       <div className=' bg-gradient-to-t from-red-500 to-red-400 text-white'>
-        <div className=' flex justify-between items-center text-gray-700 bg-white m-5 p-5  rounded-lg shadow-lg shadow-red-500'>
-          <Link href='/'><h1 className='font-bold'>Money Maple 🍁</h1></Link> 
-          <menu className='flex gap-4 items-center text'>
-            <Link href='/login'><Button>Login</Button></Link>
-            <Link href='/about'> <Button>About</Button></Link>
-          </menu>
-        </div>
+        <Header/>
 
         <section className=' flex gap-10 m-10 my-20 justify-center'>
           <div>
