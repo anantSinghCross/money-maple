@@ -50,7 +50,7 @@ function HomePage() {
         </div>
         <div className='flex items-stretch gap-4 m-10'>
 
-          <div className='flex flex-col items-center justify-between border-2 rounded-xl shadow-lg p-5 hover:scale-105 transition-all'>
+          <div className='flex flex-col items-center justify-between rounded-xl shadow-lg bg-white p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -68,7 +68,7 @@ function HomePage() {
             </div>
           </div>
           
-          <div className='flex flex-col items-center justify-between border-2 rounded-xl shadow-lg p-5 hover:scale-105 transition-all'>
+          <div className='flex flex-col items-center justify-between rounded-xl shadow-lg bg-white p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -86,7 +86,7 @@ function HomePage() {
             </div>
           </div>
           
-          <div className='flex flex-col items-center justify-between border-2 rounded-xl shadow-lg p-5 hover:scale-105 transition-all'>
+          <div className='flex flex-col items-center justify-between rounded-xl shadow-lg bg-white p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority

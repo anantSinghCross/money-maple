@@ -6,9 +6,8 @@ import React from "react";
 function LoginPage() {
   return (
     <section>
-      <Header/>
       <div className="flex justify-center items-center">
-        <div className=" border-2 rounded-2xl p-5 shadow-xl">
+        <div className="rounded-2xl p-5 shadow-xl  bg-white">
           <h3 className="p-5 text-lg font-semibold text-center text-red-400">Login</h3>
 
           <div className="flex flex-col my-1">

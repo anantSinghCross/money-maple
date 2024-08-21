@@ -4,7 +4,7 @@ import TransactionItem from './TransactionItem'
 function TransactionTable({ transactions }) {
   return (
     <div>
-      <table className='m-5 rounded-md border border-slate-100 overflow-clip'>
+      <table className='m-5 rounded-md border border-slate-100 overflow-clip bg-white'>
         <thead>
         <tr class=" bg-slate-100 text-slate-600 border-2 border-slate-100">
           <th class="text-nowrap border-r-2 border-white p-3 px-4 text-sm">Name</th>

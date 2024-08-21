@@ -6,8 +6,7 @@ function AddExpensePage() {
 
   return (
     <section>
-      <Header/>
-      <form action={addExpense} className="m-10 mx-auto max-w-lg rounded-2xl border-2 bg-white p-6 shadow-lg">
+      <form action={addExpense} className="m-10 mx-auto max-w-lg rounded-2xl bg-white p-6 shadow-lg">
         <h2 className="mb-4 text-center text-lg font-semibold text-red-400">Add New Transaction</h2>
 
         <div className="mb-4 w-full">
