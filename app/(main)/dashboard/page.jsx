@@ -1,26 +1,22 @@
+import Dashboard from '@/components/Dashboard'
+import { db } from '@/firebase'
+import { COLLECTIONS } from '@/lib/config'
+import { collection, getDocs, query } from '@firebase/firestore'
 import React from 'react'
 
-function DashboardPage() {
+async function DashboardPage() {
+  const q = query(collection(db, COLLECTIONS.TRANSACTIONS))
+  const transactionSnapshot = await getDocs(q);
+  const transactions = [];
+  transactionSnapshot.forEach(doc => {
+    transactions.push({
+      id: doc.id,
+      ...doc.data()
+    })
+  })
   return (
     <section className='p-5'>
-      <h3 className='text-2xl font-semibold pb-4'>Dashboard</h3>
-      <div className='flex gap-2 w-full justify-center'>
-        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl shadow-slate-200'>
-          <h4 className='text-slate-500'>Total Income</h4>
-          <span className='font-mono text-emerald-500 text-3xl'>+11,234</span>
-        </div>
-
-        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl shadow-slate-200'>
-          <h4 className='text-slate-500'>Total Expenses</h4>
-          <span className='font-mono text-red-500 text-3xl'>-11,234</span>
-        </div>
-
-        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl shadow-slate-200'>
-          <h4 className='text-slate-500'>Net Income</h4>
-          <span className='font-mono text-slate-600 text-3xl'>+11,234</span>
-        </div>
-      </div>
-
+      <Dashboard transactions={transactions}/>
     </section>
   )
 }
