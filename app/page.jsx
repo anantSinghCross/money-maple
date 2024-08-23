@@ -11,13 +11,13 @@ import Header from '@/components/header'
 function HomePage() {
   return (
     <div className=' flex flex-col'>
-      <div className=' bg-gradient-to-t from-red-500 to-red-400 text-white'>
+      <div className=' bg-gradient-to-t from-rose-500 to-rose-400 text-white'>
         <Header/>
 
         <section className=' flex gap-10 m-10 my-20 justify-center'>
           <div>
             <h1 className=' text-2xl font-bold py-5'>
-              Welcome to <span className=' bg-red-400 p-2 my-2 rounded-md text-nowrap'>Money Maple 🍁</span>
+              Welcome to <span className=' bg-rose-400 p-2 my-2 rounded-md text-nowrap'>Money Maple 🍁</span>
             </h1>
             <h3 className='text-xl font-semibold py-3'>
               Take Control of Your Finances
@@ -26,7 +26,7 @@ function HomePage() {
               Track Expenses, Manage Budgets, and Achieve Your Financial Goals
             </p>
             <Link href='/login'>
-              <button className='group my-5 p-5 py-3 rounded-lg bg-white text-red-500 font-bold hover:shadow-lg hover:shadow-red-400 transition-all'>
+              <button className='group my-5 p-5 py-3 rounded-lg bg-white text-rose-500 font-bold hover:shadow-lg hover:shadow-rose-400 transition-all'>
                 Get Started
               </button>
             </Link>
@@ -106,7 +106,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className='flex justify-center items-center divide-x-2 divide-red-600 gap-5 px-10 py-16 text-white bg-gradient-to-t from-red-500 to-red-400'>
+      <section className='flex justify-center items-center divide-x-2 divide-rose-600 gap-5 px-10 py-16 text-white bg-gradient-to-t from-rose-500 to-rose-400'>
         <div>
           <h1 className='text-2xl text-nowrap font-bold text-center'>
             Key Features ✨ 

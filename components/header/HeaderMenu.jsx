@@ -8,7 +8,7 @@ function HeaderMenu() {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="relative">
-      <button className="flex justify-center items-center text-red-300 hover:text-red-400" onClick={() => setShowMenu(p => !p)}>
+      <button className="flex justify-center items-center text-rose-300 hover:text-rose-400" onClick={() => setShowMenu(p => !p)}>
         <CgMenuGridO size={30}/>
       </button>
       {
