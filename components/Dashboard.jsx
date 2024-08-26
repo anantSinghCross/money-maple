@@ -1,6 +1,7 @@
 import React from 'react'
 import TransactionTable from './transactions/TransactionTable';
 import { getTotalExpense, getTotalIncome } from '@/lib/utils';
+import Link from 'next/link';
 
 function  Dashboard({ transactions }) {
   /* 
@@ -44,8 +45,11 @@ function  Dashboard({ transactions }) {
       </div>
       
       <div className='my-10 p-5 rounded-2xl bg-white shadow-xl shadow-slate-200'>
-        <h4 className=' text-slate-500 font-semibold text-lg my-5'>Recent Transactions</h4>
-        <TransactionTable transactions={transactions}/>
+        <div className='flex justify-between items-baseline'>
+          <h4 className=' text-slate-500 font-semibold text-lg my-5'>Recent Transactions</h4>
+          <Link className='text-sm font-semibold text-slate-500 hover:text-rose-500 hover:underline' href='/all-transactions'>See all</Link>
+        </div>
+        <TransactionTable transactions={transactions} numberOfRecords={5}/>
       </div>
     </>
   )

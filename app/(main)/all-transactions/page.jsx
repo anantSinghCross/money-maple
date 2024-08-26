@@ -15,8 +15,8 @@ async function AllTransactionsPage() {
   })
 
   return (
-    <section className='flex flex-col items-center m-5 my-10 p-10 rounded-xl bg-white shadow-xl shadow-slate-200'>
-      <h3 className='p-2 w-full font-semibold text-2xl text-slate-500'>Transaction History</h3>
+    <section className='flex flex-col items-center m-5 my-10 p-5 rounded-xl bg-white shadow-xl shadow-slate-200'>
+      <h3 className='my-4 w-full font-semibold text-xl text-slate-500'>Transaction History</h3>
       <TransactionTable transactions={transactions}/>
     </section>
   )
