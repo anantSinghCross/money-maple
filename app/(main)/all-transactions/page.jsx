@@ -13,6 +13,9 @@ async function AllTransactionsPage() {
       ... doc.data()
     })
   })
+  // TODO: extract a client component to use useFilters hook
+  // const {minDate, maxDate, categories, transactionTypes} = useFilters(transactions);
+  // console.log(minDate, maxDate, categories, transactionTypes);
 
   return (
     <section className='flex flex-col items-center m-5 my-10 p-5 rounded-xl bg-white shadow-xl shadow-slate-200'>

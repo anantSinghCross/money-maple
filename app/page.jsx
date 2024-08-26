@@ -31,7 +31,7 @@ function HomePage() {
               </button>
             </Link>
           </div>
-          <div className=' p-5 rounded-3xl bg-white shadow-2xl'>
+          <div className=' p-5 rounded-3xl bg-white shadow-2xl hidden md:block'>
             <Image
               priority
               src={landingIllustration}
@@ -48,9 +48,9 @@ function HomePage() {
             Why Choose Money Maple🍁?
           </h1>
         </div>
-        <div className='flex items-stretch gap-4 m-10'>
+        <div className='flex flex-col sm:flex-row items-stretch gap-4 m-10'>
 
-          <div className='flex flex-col items-center justify-between rounded-xl shadow-lg bg-white p-5 hover:scale-105 transition-all'>
+          <div className='flex flex-col items-center justify-between rounded-xl shadow-xl shadow-slate-200 bg-white p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -68,7 +68,7 @@ function HomePage() {
             </div>
           </div>
           
-          <div className='flex flex-col items-center justify-between rounded-xl shadow-lg bg-white p-5 hover:scale-105 transition-all'>
+          <div className='flex flex-col items-center justify-between rounded-xl shadow-xl shadow-slate-200 bg-white p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -86,7 +86,7 @@ function HomePage() {
             </div>
           </div>
           
-          <div className='flex flex-col items-center justify-between rounded-xl shadow-lg bg-white p-5 hover:scale-105 transition-all'>
+          <div className='flex flex-col items-center justify-between rounded-xl shadow-xl shadow-slate-200 bg-white p-5 hover:scale-105 transition-all'>
             <div className=''>
               <Image
                 priority
@@ -106,7 +106,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className='flex justify-center items-center divide-x-2 divide-rose-600 gap-5 px-10 py-16 text-white bg-gradient-to-t from-rose-500 to-rose-400'>
+      <section className='flex flex-col sm:flex-row justify-center items-center divide-x-2 divide-rose-600 gap-5 px-10 py-16 text-white bg-gradient-to-t from-rose-500 to-rose-400'>
         <div>
           <h1 className='text-2xl text-nowrap font-bold text-center'>
             Key Features ✨ 

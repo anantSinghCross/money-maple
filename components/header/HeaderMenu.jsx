@@ -14,16 +14,16 @@ function HeaderMenu() {
       {
         showMenu && (
           <menu className="flex flex-col rounded-lg absolute right-0 gap-2 items-center bg-white p-2 border">
-            <Link className="text-sm hover:bg-slate-200 px-4 py-2 rounded-md w-full text-nowrap" href="/login" onClick={() => setShowMenu(p => !p)}>
+            <Link className="text-sm hover:bg-slate-100 px-4 py-2 rounded-md w-full text-nowrap" href="/login" onClick={() => setShowMenu(p => !p)}>
               Login
             </Link>
-            <Link className="text-sm hover:bg-slate-200 px-4 py-2 rounded-md w-full text-nowrap" href="/dashboard" onClick={() => setShowMenu(p => !p)}>
+            <Link className="text-sm hover:bg-slate-100 px-4 py-2 rounded-md w-full text-nowrap" href="/dashboard" onClick={() => setShowMenu(p => !p)}>
               Dashboard
             </Link>
-            <Link className="text-sm hover:bg-slate-200 px-4 py-2 rounded-md w-full text-nowrap" href="/all-transactions" onClick={() => setShowMenu(p => !p)}>
+            <Link className="text-sm hover:bg-slate-100 px-4 py-2 rounded-md w-full text-nowrap" href="/all-transactions" onClick={() => setShowMenu(p => !p)}>
               All Transactions
             </Link>
-            <Link className="text-sm hover:bg-slate-200 px-4 py-2 rounded-md w-full text-nowrap" href="/about" onClick={() => setShowMenu(p => !p)}>
+            <Link className="text-sm hover:bg-slate-100 px-4 py-2 rounded-md w-full text-nowrap" href="/about" onClick={() => setShowMenu(p => !p)}>
               About
             </Link>
           </menu>
