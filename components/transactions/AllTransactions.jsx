@@ -65,7 +65,7 @@ function AllTransactions({ transactions }) {
         <span className="flex gap-4 items-baseline">
           <h3 className="my-3 w-full font-semibold text-xl text-slate-500">Transaction History</h3>
           <span className="text-sm sm:text-nowrap text-slate-400">
-            Showing records from <span className="bg-slate-100 px-2 py-1 rounded text-slate-500 text-xs">{fromDate}</span> till <span className="bg-slate-100 px-2 py-1 rounded text-slate-500 text-xs">{tillDate}</span>
+            Showing records from <span className="bg-slate-100 px-2 py-1 rounded-md text-slate-500 text-xs border-b-2 border-b-slate-200">{fromDate}</span> till <span className="bg-slate-100 px-2 py-1 rounded text-slate-500 text-xs border-b-2 border-slate-200">{tillDate}</span>
           </span>
         </span>
 
