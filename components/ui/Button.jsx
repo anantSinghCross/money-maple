@@ -3,10 +3,16 @@
 import React from 'react'
 import {useFormStatus} from 'react-dom'
 
-function Button({children, onClick, primary, className}) {
+const variants = {
+  primary: 'p-2 px-4 rounded-md text-sm font-semibold bg-rose-400 text-white hover:bg-rose-500',
+  secondary: 'p-2 px-4 rounded-md text-sm font-semibold hover:text-rose-400 text-slate-500 hover:bg-rose-50',
+}
+
+function Button({children, onClick, variant='primary', className}) {
+
   const {pending} = useFormStatus()
   return (
-    <button disabled={pending} className=' p-2 px-4 rounded-md text-sm font-semibold bg-rose-400 text-white hover:bg-rose-500' onClick={onClick}>
+    <button disabled={pending} className={`${variants[variant]} ${className}`} onClick={onClick}>
       {
         !pending ? children : 'Saving...'
       }

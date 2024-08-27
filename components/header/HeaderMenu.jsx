@@ -13,7 +13,7 @@ function HeaderMenu() {
       </button>
       {
         showMenu && (
-          <menu className="flex flex-col rounded-lg absolute right-0 gap-2 items-center bg-white p-2 border">
+          <menu className="flex flex-col rounded-lg absolute right-0 gap-2 items-center bg-white p-2 border z-50">
             <Link className="text-sm hover:bg-slate-100 px-4 py-2 rounded-md w-full text-nowrap" href="/login" onClick={() => setShowMenu(p => !p)}>
               Login
             </Link>
