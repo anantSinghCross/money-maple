@@ -8,13 +8,13 @@ const variants = {
   secondary: 'p-2 px-4 rounded-md text-sm font-semibold hover:text-rose-400 text-slate-500 hover:bg-rose-50',
 }
 
-function Button({children, onClick, variant='primary', className}) {
+function Button({children, onClick, variant='primary', className, pendingLabel='Saving...'}) {
 
   const {pending} = useFormStatus()
   return (
     <button disabled={pending} className={`${variants[variant]} ${className}`} onClick={onClick}>
       {
-        !pending ? children : 'Saving...'
+        !pending ? children : pendingLabel
       }
     </button>
   )
