@@ -7,7 +7,7 @@ import React from "react";
 import Alert from "@/components/ui/Alert";
 
 function LoginPage() {
-  const [state, registerUserAction] = useFormState(registerUser, null)
+  const [state, registerUserAction] = useFormState(registerUser, null);
   return (
     <section>
       <form action={registerUserAction} className="flex justify-center items-center w-full">
