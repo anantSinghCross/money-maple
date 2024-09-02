@@ -29,18 +29,19 @@ function Dashboard({ transactions }) {
     <>
       <h3 className='text-2xl text-slate-600 font-semibold pb-10'>Dashboard</h3>
       <div className='flex flex-col md:flex-row gap-4 w-full justify-center'>
-        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl shadow-slate-200 flex-1'>
-          <h4 className='text-slate-500'>Total Income</h4>
-          <span className='font-mono text-emerald-400 text-3xl'>+{totalExpenses}</span>
+        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl border-b-2 border-emerald-200 shadow-emerald-100 flex-1'>
+          <h4 className='text-slate-400'>Total Income</h4>
+          <span className='font-mono text-emerald-400 text-3xl'>+{totalIncome}</span>
         </div>
 
-        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl shadow-slate-200 flex-1'>
-          <h4 className='text-slate-500'>Total Expenses</h4>
-          <span className='font-mono text-rose-400 text-3xl'>-{totalIncome}</span>
+        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl border-b-2 border-rose-200 shadow-rose-100 flex-1'>
+          <h4 className='text-slate-400'>Total Expenses</h4>
+          <span className='font-mono text-rose-400 text-3xl'>-{totalExpenses}</span>
         </div>
 
-        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl shadow-slate-200 flex-1'>
-          <h4 className='text-slate-500'>Net Income</h4>
+
+        <div className='flex-grow p-5 rounded-xl bg-white shadow-xl border-b-2 border-slate-300 shadow-slate-200 flex-1'>
+          <h4 className='text-slate-400'>Net Income</h4>
           <span className='font-mono text-slate-500 text-3xl'>{netIncome}</span>
         </div>
       </div>

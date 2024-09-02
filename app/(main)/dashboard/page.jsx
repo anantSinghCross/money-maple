@@ -28,6 +28,7 @@ async function DashboardPage() {
 
   const userRequired = users[0];
   const q = query(collection(db, COLLECTIONS.TRANSACTIONS), where('uid', '==', userRequired.id));
+  
   const transactionSnapshot = await getDocs(q);
   const transactions = [];
   transactionSnapshot.forEach(doc => {
