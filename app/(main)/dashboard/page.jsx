@@ -15,7 +15,7 @@ async function DashboardPage() {
   let {email, userId} = verify(token.value, process.env.NEXT_PUBLIC_JWT_SECRET);
   const userq = query(collection(db, COLLECTIONS.USERS), where('email', '==', email));
   const userSnapshot = await getDocs(userq);
-  const users = []
+  const users = [];
   userSnapshot.forEach(user => {
     users.push({
       id: user.id,
@@ -44,4 +44,4 @@ async function DashboardPage() {
   )
 }
 
-export default DashboardPage
+export default DashboardPage;

@@ -6,6 +6,7 @@ import { useFilters } from "@/lib/hooks";
 import Button from "../ui/Button";
 import { LuListFilter } from "react-icons/lu";
 import { applyFilters, getAllTransactionCategories } from "@/lib/utils";
+import Link from "next/link";
 
 function AllTransactions({ transactions }) {
   const allCategories = getAllTransactionCategories(transactions);
@@ -20,7 +21,6 @@ function AllTransactions({ transactions }) {
     setMaxDate,
     setActiveCategories,
   } = useFilters(transactions);
-  console.log(minDate, maxDate, activeCategories, transactionTypes);
 
   const isTypeChecked = (type) => {
     return transactionTypes.includes(type);
@@ -60,7 +60,7 @@ function AllTransactions({ transactions }) {
   let tillDate = new Date(maxDate).toDateString().split(" ").slice(1).join(" ");
   return (
     <section className="flex flex-col m-5 my-10 mb-28 p-5 rounded-2xl bg-white shadow-xl shadow-slate-200">
-      <Button className="fixed bottom-5 right-5 shadow-lg">Add Expense</Button>
+      <Link href='/add-expense'><Button className="fixed bottom-5 right-5 shadow-lg">Add Expense</Button></Link>
       <div className="flex justify-between items-center">
         <span className="flex gap-4 items-baseline">
           <h3 className="my-3 w-full font-semibold text-xl text-slate-500">Transaction History</h3>

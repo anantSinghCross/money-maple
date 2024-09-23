@@ -5,6 +5,7 @@ import { useFormState } from "react-dom";
 import { registerUser } from "@/lib/server-actions";
 import React from "react";
 import Alert from "@/components/ui/Alert";
+import Link from "next/link";
 
 function SignupPage() {
   const [state, registerUserAction] = useFormState(registerUser, null);
@@ -23,12 +24,12 @@ function SignupPage() {
           <div className="">
             <div className="flex flex-col mb-2 flex-1">
               <label className="text-sm py-1 text-slate-600" htmlFor="first-name">First Name</label>
-              <input name="first-name" className=" p-2 rounded border outline-rose-400 shadow-inner" type="text" id="email" />
+              <input name="first-name" className=" p-2 rounded border outline-rose-400 shadow-inner" type="text" id="first-name" />
             </div>
 
             <div className="flex flex-col mb-2 flex-1">
               <label className="text-sm py-1 text-slate-600" htmlFor="last-name">Last Name</label>
-              <input name="last-name" className=" p-2 rounded border outline-rose-400 shadow-inner" type="text" id="email" />
+              <input name="last-name" className=" p-2 rounded border outline-rose-400 shadow-inner" type="text" id="last-name" />
             </div>
           </div>
 
@@ -42,7 +43,8 @@ function SignupPage() {
             <input name="password" className=" p-2 rounded border outline-rose-400 shadow-inner" type="password" id="pwd" />
           </div>
 
-          <div className="flex gap-2 items-center py-2 justify-end">
+          <div className="flex gap-2 items-center py-2 justify-between">
+            <Link className="text-sm font-semibold hover:underline text-rose-500" href='/login'>Login</Link>
             <Button className='mt-2' pendingLabel="Logging in">Login</Button>
           </div>
         </div>

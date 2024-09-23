@@ -5,6 +5,7 @@ import { useFormState } from "react-dom";
 import { loginUser } from "@/lib/server-actions";
 import React from "react";
 import Alert from "@/components/ui/Alert";
+import Link from "next/link";
 
 function LoginPage() {
   const [state, loginUserAction] = useFormState(loginUser, null);
@@ -30,7 +31,8 @@ function LoginPage() {
             <input name="password" className=" p-2 rounded border outline-rose-400 shadow-inner" type="password" id="pwd" />
           </div>
 
-          <div className="flex gap-2 items-center py-2 justify-end">
+          <div className="flex gap-2 items-center py-2 justify-between">
+            <Link className="text-sm font-semibold hover:underline text-rose-500" href='/signup'>Signup</Link>
             <Button className='mt-2' pendingLabel="Logging in">Login</Button>
           </div>
         </div>

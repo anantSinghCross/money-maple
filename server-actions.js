@@ -5,7 +5,7 @@ import { db } from "./firebase";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 
-export async function addExpense(formData){
+export async function addExpense(uid, formData){
   const transactionDetails = {
     expenseName: formData.get('expenseName'),
     currency: formData.get('currency'),
@@ -14,7 +14,8 @@ export async function addExpense(formData){
     dot: formData.get('dot'),
     category: formData.get('category'),
     description: formData.get('description'),
-    paymentMethod: formData.get('payment-method')
+    paymentMethod: formData.get('payment-method'),
+    uid
   };
 
   const transactionCollection = collection(db, 'transactions');

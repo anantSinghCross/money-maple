@@ -6,7 +6,7 @@ function TransactionTable({ transactions, numberOfRecords }) {
     <>
     {
       (!transactions || transactions.length===0) ? (
-        <div>
+        <div className='bg-slate-50 p-1 px-2 rounded-md text-sm text-slate-400'>
           No transactions to show. Try changing your filter.
         </div>
       ) : (
