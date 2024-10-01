@@ -26,7 +26,7 @@ function HomePage() {
               Track Expenses, Manage Budgets, and Achieve Your Financial Goals
             </p>
             <Link href='/login'>
-              <button className='group my-5 p-5 py-3 rounded-lg bg-white text-rose-500 font-bold hover:shadow-lg hover:shadow-rose-400 transition-all'>
+              <button className='group my-5 p-5 py-3 rounded-lg bg-white text-rose-500 font-bold hover:shadow-lg hover:shadow-white/30 transition-all'>
                 Get Started
               </button>
             </Link>
