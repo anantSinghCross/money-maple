@@ -7,7 +7,8 @@ import { deleteExpense } from "@/server-actions";
 
 function TransactionItem({ transaction }) {
   const router = useRouter();
-  let { expenseName, amount, currency, dot, category, paymentMethod, type } = transaction;
+  let { expenseName, amount, currency, dot, category, paymentMethod, type } = transaction || {};
+
   if (expenseName === "" || expenseName === null || expenseName === undefined) {
     expenseName = "Unknown";
   }
@@ -25,7 +26,7 @@ function TransactionItem({ transaction }) {
       <td className={`text-nowrap p-4 font-mono text-sm text-end`}>
         <span
           className={`px-2 py-1 rounded ${amountColor} transition-all`}
-        >{`${sign} ${amount}`}</span>
+        >{`${sign} ${(+amount).toLocaleString()}`}</span>
       </td>
       <td className="text-nowrap p-4 text-sm text-slate-600">{currency}</td>
       <td className="text-nowrap p-4 text-sm text-slate-600">{date}</td>

@@ -1,11 +1,14 @@
 import React from 'react'
 import TransactionItem from './TransactionItem'
+import { applySorting } from '../../lib/utils'
 
 function TransactionTable({ transactions, numberOfRecords }) {
+  const sortedTransactions = applySorting(transactions);
+  console.log(sortedTransactions);
   return (
     <>
     {
-      (!transactions || transactions.length===0) ? (
+      (!sortedTransactions || sortedTransactions.length===0) ? (
         <div className='bg-slate-50 p-1 px-2 rounded-md text-sm text-slate-400'>
           No transactions to show. Try changing your filter.
         </div>
@@ -24,7 +27,7 @@ function TransactionTable({ transactions, numberOfRecords }) {
           </thead>
           <tbody>
             {
-              transactions.map((item, i) => {
+              sortedTransactions.map((item, i) => {
                 if((numberOfRecords && i<numberOfRecords) || !numberOfRecords){
                   return <TransactionItem key={item.id} transaction={item} />
                 }
