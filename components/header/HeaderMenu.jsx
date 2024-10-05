@@ -18,7 +18,7 @@ function HeaderMenu() {
       </button>
       {
         showMenu && (
-          <menu className="flex flex-col rounded-lg absolute text-slate-500 right-0 gap-2 items-center bg-white p-2 border-2 z-50">
+          <menu className="flex flex-col rounded-xl absolute text-slate-500 right-0 gap-2 items-center bg-white p-2 border-2 border-slate-50 z-50 shadow-xl">
             <Link className="text-sm hover:bg-slate-100 px-2 py-2 rounded-md w-full text-nowrap" href="/login" onClick={() => setShowMenu(p => !p)}>
               <div className="flex gap-2 items-center">
                 <BiLogIn size={17}/>
