@@ -17,7 +17,7 @@ function HomePage() {
         <section className=' flex gap-10 m-10 my-20 justify-center'>
           <div>
             <h1 className=' text-2xl font-bold py-5'>
-              Welcome to <span className=' bg-rose-400 p-2 my-2 rounded-md text-nowrap'>Money Maple 🍁</span>
+              Welcome to <span className=' bg-rose-400 p-2 my-2 rounded-md text-nowrap'>Money Maple  </span>
             </h1>
             <h3 className='text-xl font-semibold py-3'>
               Take Control of Your Finances
@@ -45,7 +45,7 @@ function HomePage() {
       <section className='flex flex-col gap-10 text-gray-700 my-20'>
         <div>
           <h1 className='text-2xl font-bold text-center mt-10'>
-            Why Choose Money Maple🍁?
+            Why Choose Money Maple ?
           </h1>
         </div>
         <div className='flex flex-col sm:flex-row items-stretch gap-4 m-10'>
@@ -123,7 +123,7 @@ function HomePage() {
       </section>
 
       <footer className='py-12 px-10 text-slate-200 bg-slate-600 text-center text-xs font-bold'>
-        &copy; 2024 <span className='p-1 bg-black bg-opacity-20 rounded'>Money Maple 🍁</span>. All rights reserved.
+        &copy; 2024 <span className='p-1 bg-black bg-opacity-20 rounded'>Money Maple  </span>. All rights reserved.
       </footer>
     </div>
   )

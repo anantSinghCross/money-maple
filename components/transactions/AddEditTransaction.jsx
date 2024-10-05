@@ -145,7 +145,7 @@ export default function AddEditTransaction({ userId, editProps }) {
 
         <div className="text-center">
           <Button className="w-full rounded-md shadow-inner bg-rose-400 px-2 py-2 font-semibold text-white hover:bg-rose-500 transition-all">
-            Add Transaction
+            Save Transaction
           </Button>
         </div>
       </form>
