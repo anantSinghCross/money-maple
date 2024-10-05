@@ -4,7 +4,6 @@ import { applySorting } from '../../lib/utils'
 
 function TransactionTable({ transactions, numberOfRecords }) {
   const sortedTransactions = applySorting(transactions);
-  console.log(sortedTransactions);
   return (
     <>
     {
