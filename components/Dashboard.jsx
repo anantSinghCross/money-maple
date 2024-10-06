@@ -46,9 +46,9 @@ function Dashboard({ transactions }) {
       </div>
       
       <div className='my-10 p-5 rounded-2xl bg-white shadow-xl shadow-slate-200'>
-        <div className='flex justify-between items-baseline'>
+        <div className='flex flex-col sm:flex-row justify-between items-baseline'>
           <h4 className=' text-slate-500 font-semibold text-lg my-5'>Recent Transactions</h4>
-          <div className='flex gap-4 flex-col sm:flex-row items-center'>
+          <div className='flex gap-4 self-end items-center'>
             <Link className='text-sm font-semibold text-slate-500 hover:text-rose-500 hover:underline' href='/all-transactions'>
               See all
             </Link>

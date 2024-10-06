@@ -61,15 +61,15 @@ function AllTransactions({ transactions }) {
   return (
     <section className="flex flex-col m-5 my-10 mb-28 p-5 rounded-2xl bg-white shadow-xl shadow-slate-200">
       <Link href='/add-expense'><Button className="fixed bottom-5 right-5 shadow-lg">Add Expense</Button></Link>
-      <div className="flex justify-between items-center">
-        <span className="flex gap-4 items-baseline">
+      <div className="flex flex-col md:items-center md:flex-row justify-between gap-5 items-center">
+        <span className="flex flex-col md:flex-row self-start gap-4 items-baseline">
           <h3 className="my-3 w-full font-semibold text-xl text-slate-500">Transaction History</h3>
           <span className="text-sm sm:text-nowrap text-slate-400">
-            Showing records from <span className="bg-slate-100 px-2 py-1 rounded-md text-slate-500 text-xs border-b-2 border-b-slate-200">{fromDate}</span> till <span className="bg-slate-100 px-2 py-1 rounded text-slate-500 text-xs border-b-2 border-slate-200">{tillDate}</span>
+            Showing records from <span className="bg-slate-100 px-2 py-1 rounded-md text-slate-500 text-xs text-nowrap border-b-2 border-b-slate-200">{fromDate}</span> till <span className="bg-slate-100 px-2 py-1 rounded text-slate-500 text-xs text-nowrap border-b-2 border-slate-200">{tillDate}</span>
           </span>
         </span>
 
-        <div className="relative">
+        <div className="relative self-end">
           <Button variant="secondary" onClick={() => setOpenFilters((p) => !p)}>
             <span className="flex gap-2 items-center">
               <LuListFilter />

@@ -1,7 +1,7 @@
 import Dashboard from '@/components/Dashboard'
 import { db } from '@/firebase'
 import { COLLECTIONS } from '@/lib/config'
-import { collection, getDoc, getDocs, query, where } from '@firebase/firestore'
+import { collection, getDocs, query, where } from '@firebase/firestore'
 import { verify } from 'jsonwebtoken'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
