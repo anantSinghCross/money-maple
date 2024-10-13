@@ -4,6 +4,8 @@ import { RiEditLine } from "react-icons/ri";
 import { MdDeleteOutline } from "react-icons/md";
 import { useRouter } from "next/navigation";
 import { deleteExpense } from "@/server-actions";
+import StatusElement from "components/ui/StatusElement";
+import { CgSpinner } from "react-icons/cg";
 
 function TransactionItem({ transaction }) {
   const router = useRouter();
@@ -46,15 +48,17 @@ function TransactionItem({ transaction }) {
           >
             <RiEditLine size={17} />
           </button>
-          <button
-            className="p-1 hover:bg-red-100 hover:text-red-500 rounded text-rose-400 border-2 border-transparent hover:border-white"
-            onClick={async () => {
-              await deleteExpense(transaction.id);
-              router.refresh();
-            }}
-          >
-            <MdDeleteOutline size={17} />
-          </button>
+          <form action={deleteExpense.bind(null, transaction.id)}>
+            <button
+              className="p-1 hover:bg-red-100 hover:text-red-500 rounded text-rose-400 border-2 border-transparent hover:border-white"
+            >
+              <StatusElement fallback={
+                <CgSpinner className=" animate-spin" size={17} />
+              }>
+                <MdDeleteOutline size={17} />
+              </StatusElement>
+            </button>
+          </form>
         </div>
       </td>
     </tr>

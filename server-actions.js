@@ -50,7 +50,8 @@ export async function deleteExpense(trxnId){
   if(reqTransaction.uid !== user.id){
     throw new Error("Transaction does not belong to the user or this transaction/user does not exist.");
   }
-  return await deleteDoc(doc(db, COLLECTIONS.TRANSACTIONS, reqTransaction.id));
+  await deleteDoc(doc(db, COLLECTIONS.TRANSACTIONS, reqTransaction.id));
+  revalidatePath('/')
 }
 
 export async function fetchTransaction(trxnId){
